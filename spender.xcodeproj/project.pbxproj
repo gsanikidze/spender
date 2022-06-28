@@ -27,6 +27,10 @@
 		21B69C97286B26C90051D81F /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69C95286B26C90051D81F /* CarouselItem.swift */; };
 		21B69C99286B30F70051D81F /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69C98286B30F70051D81F /* ButtonExtension.swift */; };
 		21B69C9A286B30F70051D81F /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69C98286B30F70051D81F /* ButtonExtension.swift */; };
+		21B69C9F286B38FE0051D81F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69C9E286B38FE0051D81F /* User.swift */; };
+		21B69CA0286B38FE0051D81F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69C9E286B38FE0051D81F /* User.swift */; };
+		21B69CA2286B47790051D81F /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69CA1286B47790051D81F /* MainScreen.swift */; };
+		21B69CA3286B47790051D81F /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69CA1286B47790051D81F /* MainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,8 @@
 		219B4D83286B1D210031089B /* CarouselItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemView.swift; sourceTree = "<group>"; };
 		21B69C95286B26C90051D81F /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
 		21B69C98286B30F70051D81F /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		21B69C9E286B38FE0051D81F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		21B69CA1286B47790051D81F /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 				219B4D51286B0BA60031089B /* spender.xcdatamodeld */,
 				219B4D55286B0BA60031089B /* Persistence.swift */,
 				21B69C95286B26C90051D81F /* CarouselItem.swift */,
+				21B69C9E286B38FE0051D81F /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,6 +132,7 @@
 			children = (
 				219B4D54286B0BA60031089B /* ContentView.swift */,
 				219B4D79286B0DC80031089B /* WelcomeScreen.swift */,
+				21B69CA1286B47790051D81F /* MainScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -239,11 +247,13 @@
 				21B69C96286B26C90051D81F /* CarouselItem.swift in Sources */,
 				219B4D64286B0BAA0031089B /* spender.xcdatamodeld in Sources */,
 				219B4D6A286B0BAA0031089B /* Persistence.swift in Sources */,
+				21B69CA2286B47790051D81F /* MainScreen.swift in Sources */,
 				219B4D7A286B0DC80031089B /* WelcomeScreen.swift in Sources */,
 				219B4D7E286B17CF0031089B /* BrandColors.swift in Sources */,
 				219B4D66286B0BAA0031089B /* spenderApp.swift in Sources */,
 				219B4D84286B1D210031089B /* CarouselItemView.swift in Sources */,
 				21B69C99286B30F70051D81F /* ButtonExtension.swift in Sources */,
+				21B69C9F286B38FE0051D81F /* User.swift in Sources */,
 				219B4D68286B0BAA0031089B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,11 +265,13 @@
 				21B69C97286B26C90051D81F /* CarouselItem.swift in Sources */,
 				219B4D65286B0BAA0031089B /* spender.xcdatamodeld in Sources */,
 				219B4D6B286B0BAA0031089B /* Persistence.swift in Sources */,
+				21B69CA3286B47790051D81F /* MainScreen.swift in Sources */,
 				219B4D7B286B0DC80031089B /* WelcomeScreen.swift in Sources */,
 				219B4D7F286B17CF0031089B /* BrandColors.swift in Sources */,
 				219B4D67286B0BAA0031089B /* spenderApp.swift in Sources */,
 				219B4D85286B1D210031089B /* CarouselItemView.swift in Sources */,
 				21B69C9A286B30F70051D81F /* ButtonExtension.swift in Sources */,
+				21B69CA0286B38FE0051D81F /* User.swift in Sources */,
 				219B4D69286B0BAA0031089B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

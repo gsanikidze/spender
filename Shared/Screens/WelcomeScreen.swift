@@ -47,7 +47,7 @@ struct WelcomeScreen: View {
                 }
             }
             
-            Button("Getting Started", action: {})
+            Button("Getting Started", action: { User.shared.markInstructionsAsRead() })
                 .primary()
                 .padding(.top, 20)
         }
