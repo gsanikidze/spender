@@ -20,23 +20,30 @@ struct TopTabView: View {
     
     var body: some View {
         VStack {
-            HStack (spacing: 10) {
+            HStack (spacing: 0) {
                 ForEach(0..<tabs.count, id: \.self) { i in
-                    if (i == selectedTab) {
-                        Button (tabs[i].label, action: {})
-                            .primary(size: .sm)
-                    } else {
-                        Button (tabs[i].label, action: {
-                            withAnimation {
-                                selectedTab = i
-                            }
-                        })
-                        .filled(size: .sm)
+                    VStack (spacing: 20) {
+                        if i == selectedTab {
+                            Text(tabs[i].label)
+                                .foregroundColor(BrandColors.primary)
+                        } else {
+                            Text(tabs[i].label)
+                                .foregroundColor(colorScheme == .dark ? BrandColors.gray : BrandColors.dark)
+                        }
+                        
+                        Rectangle()
+                            .fill(BrandColors.primary)
+                            .frame(height: i == selectedTab ? 1 : 0)
+                    }
+                    .padding(.top)
+                    .onTapGesture {
+                        withAnimation {
+                            selectedTab = i
+                        }
                     }
                 }
             }
             .frame(width: UIScreen.main.bounds.width)
-            .padding(.vertical)
             .background(
                 Color(UIColor.systemBackground)
                     .ignoresSafeArea()

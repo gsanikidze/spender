@@ -16,7 +16,7 @@ struct HomeScreen: View {
     @State private var selectedTab = 0
     
     private let tabs: [TopTabItem] = [
-        TopTabItem(label: "Planned", content: AnyView(Text("Planned Tab"))),
+        TopTabItem(label: "Budget", content: AnyView(Text("Planned Tab"))),
         TopTabItem(label: "Spent", content: AnyView(Text("Spent Tab"))),
         TopTabItem(label: "Remaining", content: AnyView(Text("Remaining Tab")))
     ]
