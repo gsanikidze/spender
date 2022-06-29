@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21699B54286C3F6D0023C4F7 /* RouterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B53286C3F6D0023C4F7 /* RouterScreen.swift */; };
+		21699B55286C3F6D0023C4F7 /* RouterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B53286C3F6D0023C4F7 /* RouterScreen.swift */; };
+		21699B57286C433B0023C4F7 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B56286C433B0023C4F7 /* HomeScreen.swift */; };
+		21699B58286C433B0023C4F7 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B56286C433B0023C4F7 /* HomeScreen.swift */; };
+		21699B5A286C51D70023C4F7 /* TopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B59286C51D70023C4F7 /* TopTabView.swift */; };
+		21699B5B286C51D70023C4F7 /* TopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B59286C51D70023C4F7 /* TopTabView.swift */; };
 		219B4D64286B0BAA0031089B /* spender.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D51286B0BA60031089B /* spender.xcdatamodeld */; };
 		219B4D65286B0BAA0031089B /* spender.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D51286B0BA60031089B /* spender.xcdatamodeld */; };
 		219B4D66286B0BAA0031089B /* spenderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D53286B0BA60031089B /* spenderApp.swift */; };
@@ -29,11 +35,14 @@
 		21B69C9A286B30F70051D81F /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69C98286B30F70051D81F /* ButtonExtension.swift */; };
 		21B69C9F286B38FE0051D81F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69C9E286B38FE0051D81F /* User.swift */; };
 		21B69CA0286B38FE0051D81F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69C9E286B38FE0051D81F /* User.swift */; };
-		21B69CA2286B47790051D81F /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69CA1286B47790051D81F /* MainScreen.swift */; };
-		21B69CA3286B47790051D81F /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69CA1286B47790051D81F /* MainScreen.swift */; };
+		21B69CA2286B47790051D81F /* GuardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69CA1286B47790051D81F /* GuardScreen.swift */; };
+		21B69CA3286B47790051D81F /* GuardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69CA1286B47790051D81F /* GuardScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21699B53286C3F6D0023C4F7 /* RouterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterScreen.swift; sourceTree = "<group>"; };
+		21699B56286C433B0023C4F7 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		21699B59286C51D70023C4F7 /* TopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabView.swift; sourceTree = "<group>"; };
 		219B4D52286B0BA60031089B /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		219B4D53286B0BA60031089B /* spenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spenderApp.swift; sourceTree = "<group>"; };
 		219B4D54286B0BA60031089B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,7 +57,7 @@
 		21B69C95286B26C90051D81F /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
 		21B69C98286B30F70051D81F /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		21B69C9E286B38FE0051D81F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		21B69CA1286B47790051D81F /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		21B69CA1286B47790051D81F /* GuardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				219B4D83286B1D210031089B /* CarouselItemView.swift */,
+				21699B59286C51D70023C4F7 /* TopTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,7 +142,9 @@
 			children = (
 				219B4D54286B0BA60031089B /* ContentView.swift */,
 				219B4D79286B0DC80031089B /* WelcomeScreen.swift */,
-				21B69CA1286B47790051D81F /* MainScreen.swift */,
+				21B69CA1286B47790051D81F /* GuardScreen.swift */,
+				21699B53286C3F6D0023C4F7 /* RouterScreen.swift */,
+				21699B56286C433B0023C4F7 /* HomeScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -246,9 +258,12 @@
 			files = (
 				21B69C96286B26C90051D81F /* CarouselItem.swift in Sources */,
 				219B4D64286B0BAA0031089B /* spender.xcdatamodeld in Sources */,
+				21699B5A286C51D70023C4F7 /* TopTabView.swift in Sources */,
+				21699B54286C3F6D0023C4F7 /* RouterScreen.swift in Sources */,
 				219B4D6A286B0BAA0031089B /* Persistence.swift in Sources */,
-				21B69CA2286B47790051D81F /* MainScreen.swift in Sources */,
+				21B69CA2286B47790051D81F /* GuardScreen.swift in Sources */,
 				219B4D7A286B0DC80031089B /* WelcomeScreen.swift in Sources */,
+				21699B57286C433B0023C4F7 /* HomeScreen.swift in Sources */,
 				219B4D7E286B17CF0031089B /* BrandColors.swift in Sources */,
 				219B4D66286B0BAA0031089B /* spenderApp.swift in Sources */,
 				219B4D84286B1D210031089B /* CarouselItemView.swift in Sources */,
@@ -264,9 +279,12 @@
 			files = (
 				21B69C97286B26C90051D81F /* CarouselItem.swift in Sources */,
 				219B4D65286B0BAA0031089B /* spender.xcdatamodeld in Sources */,
+				21699B5B286C51D70023C4F7 /* TopTabView.swift in Sources */,
+				21699B55286C3F6D0023C4F7 /* RouterScreen.swift in Sources */,
 				219B4D6B286B0BAA0031089B /* Persistence.swift in Sources */,
-				21B69CA3286B47790051D81F /* MainScreen.swift in Sources */,
+				21B69CA3286B47790051D81F /* GuardScreen.swift in Sources */,
 				219B4D7B286B0DC80031089B /* WelcomeScreen.swift in Sources */,
+				21699B58286C433B0023C4F7 /* HomeScreen.swift in Sources */,
 				219B4D7F286B17CF0031089B /* BrandColors.swift in Sources */,
 				219B4D67286B0BAA0031089B /* spenderApp.swift in Sources */,
 				219B4D85286B1D210031089B /* CarouselItemView.swift in Sources */,

@@ -19,4 +19,6 @@ struct BrandColors {
     static let gray = Color("gray")
     
     static let dark = Color("dark")
+    
+    static let lightGray = Color("lightGray")
 }

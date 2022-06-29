@@ -13,7 +13,7 @@ struct spenderApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainScreen()
+            GuardScreen()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct MainScreen: View {
+struct GuardScreen: View {
     @ObservedObject private var user = User.shared
     
     var body: some View {
         if user.hasInstructionsRead {
-            ContentView()
+            RouterScreen()
         } else {
             WelcomeScreen()
         }
     }
 }
 
-struct MainScreen_Previews: PreviewProvider {
+struct GuardScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen()
+        GuardScreen()
     }
 }
