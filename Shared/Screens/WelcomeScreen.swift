@@ -27,12 +27,20 @@ struct WelcomeScreen: View {
     
     var body: some View {
         VStack {
+#if os(iOS)
             TabView (selection: $activeTab) {
                 ForEach ((0..<carouselData.count), id: \.self) { i in
                     CarouselItemView(data: carouselData[i])
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+#else
+            TabView (selection: $activeTab) {
+                ForEach ((0..<carouselData.count), id: \.self) { i in
+                    CarouselItemView(data: carouselData[i])
+                }
+            }
+#endif
             
             HStack {
                 ForEach((0..<carouselData.count), id: \.self) { i in
@@ -47,9 +55,10 @@ struct WelcomeScreen: View {
                 }
             }
             
+            
             Button("Getting Started", action: { User.shared.markInstructionsAsRead() })
                 .primary()
-                .padding(.top, 20)
+                .padding(.vertical, 20)
         }
     }
 }

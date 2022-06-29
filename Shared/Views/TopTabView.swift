@@ -15,31 +15,32 @@ struct TopTabItem {
 struct TopTabView: View {
     var tabs: [TopTabItem]
     
+    @Environment(\.colorScheme) var colorScheme
     @State private var selectedTab = 0
     
     var body: some View {
         VStack {
             HStack (spacing: 10) {
                 ForEach(0..<tabs.count, id: \.self) { i in
-                    Text(tabs[i].label)
-                        .padding(10)
-                        .background(i == selectedTab ? BrandColors.primary : BrandColors.lightGray)
-                        .foregroundColor(i == selectedTab ? .white : .gray)
-                        .cornerRadius(5)
-                        .clipped()
-                        .onTapGesture {
+                    if (i == selectedTab) {
+                        Button (tabs[i].label, action: {})
+                            .primary(size: .sm)
+                    } else {
+                        Button (tabs[i].label, action: {
                             withAnimation {
                                 selectedTab = i
                             }
-                        }
+                        })
+                        .filled(size: .sm)
+                    }
                 }
             }
             .frame(width: UIScreen.main.bounds.width)
             .padding(.vertical)
             .background(
-                Color.white
+                Color(UIColor.systemBackground)
                     .ignoresSafeArea()
-                    .shadow(color: BrandColors.dark.opacity(0.2), radius: 10, x: 0, y: 2)
+                    .shadow(color: (colorScheme == .dark ? .white : BrandColors.dark).opacity(0.2) , radius: 10, x: 0, y: 2)
             )
             
             TabView (selection: $selectedTab) {

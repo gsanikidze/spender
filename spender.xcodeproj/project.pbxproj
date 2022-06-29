@@ -43,6 +43,7 @@
 		21699B53286C3F6D0023C4F7 /* RouterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterScreen.swift; sourceTree = "<group>"; };
 		21699B56286C433B0023C4F7 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		21699B59286C51D70023C4F7 /* TopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabView.swift; sourceTree = "<group>"; };
+		21699B5C286C55E00023C4F7 /* spender (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "spender (iOS).entitlements"; sourceTree = "<group>"; };
 		219B4D52286B0BA60031089B /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		219B4D53286B0BA60031089B /* spenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spenderApp.swift; sourceTree = "<group>"; };
 		219B4D54286B0BA60031089B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		219B4D4B286B0BA60031089B = {
 			isa = PBXGroup;
 			children = (
+				21699B5C286C55E00023C4F7 /* spender (iOS).entitlements */,
 				219B4D50286B0BA60031089B /* Shared */,
 				219B4D62286B0BAA0031089B /* macOS */,
 				219B4D5C286B0BAA0031089B /* Products */,
@@ -411,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "spender (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6ANX7ZKG8C;
@@ -430,6 +433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gsanikidze.spender;
 				PRODUCT_NAME = Spender;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -441,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "spender (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6ANX7ZKG8C;
@@ -460,6 +465,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gsanikidze.spender;
 				PRODUCT_NAME = Spender;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
