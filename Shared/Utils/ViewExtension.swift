@@ -20,6 +20,8 @@ struct MultiShadow: ViewModifier {
 }
 
 struct Card: ViewModifier {
+    var title: String = ""
+    
     func body(content: Content) -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
@@ -27,6 +29,14 @@ struct Card: ViewModifier {
                 .multiShadow()
             
             VStack (spacing: 10) {
+                if !title.isEmpty {
+                    HStack {
+                        Text(title)
+                            .font(.headline)
+                        Spacer()
+                    }
+                }
+                
                 content
             }
             .padding()
@@ -39,7 +49,7 @@ extension View {
         modifier(MultiShadow())
     }
     
-    func card() -> some View {
-        modifier(Card())
+    func card(title: String = "") -> some View {
+        modifier(Card(title: title))
     }
 }
