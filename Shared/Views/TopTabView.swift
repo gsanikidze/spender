@@ -19,43 +19,44 @@ struct TopTabView: View {
     @State private var selectedTab = 0
     
     var body: some View {
-        VStack {
-            HStack (spacing: 0) {
-                ForEach(0..<tabs.count, id: \.self) { i in
-                    VStack (spacing: 20) {
-                        if i == selectedTab {
-                            Text(tabs[i].label)
-                                .foregroundColor(BrandColors.primary)
-                        } else {
-                            Text(tabs[i].label)
-                                .foregroundColor(colorScheme == .dark ? BrandColors.gray : BrandColors.dark)
+        GeometryReader { geo in
+            VStack (spacing: 0) {
+                HStack (spacing: 0) {
+                    ForEach(0..<tabs.count, id: \.self) { i in
+                        VStack (spacing: 20) {
+                            if i == selectedTab {
+                                Text(tabs[i].label)
+                                    .foregroundColor(BrandColors.primary)
+                            } else {
+                                Text(tabs[i].label)
+                                    .foregroundColor(colorScheme == .dark ? BrandColors.gray : BrandColors.dark)
+                            }
+                            
+                            Rectangle()
+                                .fill(BrandColors.primary)
+                                .frame(height: i == selectedTab ? 1 : 0)
                         }
-                        
-                        Rectangle()
-                            .fill(BrandColors.primary)
-                            .frame(height: i == selectedTab ? 1 : 0)
-                    }
-                    .padding(.top)
-                    .onTapGesture {
-                        withAnimation {
-                            selectedTab = i
+                        .padding(.top, geo.safeAreaInsets.top)
+                        .onTapGesture {
+                            withAnimation {
+                                selectedTab = i
+                            }
                         }
                     }
                 }
-            }
-            .frame(width: UIScreen.main.bounds.width)
-            .background(
-                Color(UIColor.systemBackground)
-                    .ignoresSafeArea()
-                    .shadow(color: (colorScheme == .dark ? .white : BrandColors.dark).opacity(0.2) , radius: 10, x: 0, y: 2)
-            )
-            
-            TabView (selection: $selectedTab) {
-                ForEach(0..<tabs.count, id: \.self) { i in
-                    tabs[i].content
+                .frame(width: UIScreen.main.bounds.width)
+                .multiShadow()
+                .ignoresSafeArea()
+                .zIndex(1)
+                
+                TabView (selection: $selectedTab) {
+                    ForEach(0..<tabs.count, id: \.self) { i in
+                        tabs[i].content
+                    }
                 }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .padding(.top, -geo.safeAreaInsets.top)
             }
-            .tabViewStyle(.page(indexDisplayMode: .never))
         }
     }
 }

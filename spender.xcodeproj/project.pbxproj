@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21691C7A286EE3CC00C750DE /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C79286EE3CC00C750DE /* ViewExtension.swift */; };
+		21691C7B286EE3CC00C750DE /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C79286EE3CC00C750DE /* ViewExtension.swift */; };
+		21691C7D286EE55500C750DE /* BudgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C7C286EE55500C750DE /* BudgetScreen.swift */; };
+		21691C7E286EE55500C750DE /* BudgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C7C286EE55500C750DE /* BudgetScreen.swift */; };
 		21699B54286C3F6D0023C4F7 /* RouterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B53286C3F6D0023C4F7 /* RouterScreen.swift */; };
 		21699B55286C3F6D0023C4F7 /* RouterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B53286C3F6D0023C4F7 /* RouterScreen.swift */; };
 		21699B57286C433B0023C4F7 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B56286C433B0023C4F7 /* HomeScreen.swift */; };
@@ -40,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21691C79286EE3CC00C750DE /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		21691C7C286EE55500C750DE /* BudgetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetScreen.swift; sourceTree = "<group>"; };
 		21699B53286C3F6D0023C4F7 /* RouterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterScreen.swift; sourceTree = "<group>"; };
 		21699B56286C433B0023C4F7 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		21699B59286C51D70023C4F7 /* TopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabView.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				21B69CA1286B47790051D81F /* GuardScreen.swift */,
 				21699B53286C3F6D0023C4F7 /* RouterScreen.swift */,
 				21699B56286C433B0023C4F7 /* HomeScreen.swift */,
+				21691C7C286EE55500C750DE /* BudgetScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -156,6 +163,7 @@
 			children = (
 				219B4D7D286B17CF0031089B /* BrandColors.swift */,
 				21B69C98286B30F70051D81F /* ButtonExtension.swift */,
+				21691C79286EE3CC00C750DE /* ViewExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -266,11 +274,13 @@
 				21B69CA2286B47790051D81F /* GuardScreen.swift in Sources */,
 				219B4D7A286B0DC80031089B /* WelcomeScreen.swift in Sources */,
 				21699B57286C433B0023C4F7 /* HomeScreen.swift in Sources */,
+				21691C7D286EE55500C750DE /* BudgetScreen.swift in Sources */,
 				219B4D7E286B17CF0031089B /* BrandColors.swift in Sources */,
 				219B4D66286B0BAA0031089B /* spenderApp.swift in Sources */,
 				219B4D84286B1D210031089B /* CarouselItemView.swift in Sources */,
 				21B69C99286B30F70051D81F /* ButtonExtension.swift in Sources */,
 				21B69C9F286B38FE0051D81F /* User.swift in Sources */,
+				21691C7A286EE3CC00C750DE /* ViewExtension.swift in Sources */,
 				219B4D68286B0BAA0031089B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,11 +297,13 @@
 				21B69CA3286B47790051D81F /* GuardScreen.swift in Sources */,
 				219B4D7B286B0DC80031089B /* WelcomeScreen.swift in Sources */,
 				21699B58286C433B0023C4F7 /* HomeScreen.swift in Sources */,
+				21691C7E286EE55500C750DE /* BudgetScreen.swift in Sources */,
 				219B4D7F286B17CF0031089B /* BrandColors.swift in Sources */,
 				219B4D67286B0BAA0031089B /* spenderApp.swift in Sources */,
 				219B4D85286B1D210031089B /* CarouselItemView.swift in Sources */,
 				21B69C9A286B30F70051D81F /* ButtonExtension.swift in Sources */,
 				21B69CA0286B38FE0051D81F /* User.swift in Sources */,
+				21691C7B286EE3CC00C750DE /* ViewExtension.swift in Sources */,
 				219B4D69286B0BAA0031089B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
