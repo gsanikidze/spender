@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct BudgetScreen: View {
-    private let incomes: [Income] = [
-        Income(title: "Sallery", amount: 2000),
-        Income(title: "Passive Income", amount: 1000)
-    ]
+    @Environment(\.managedObjectContext) var moc
+    
+    private var incomes: [Income] = []
+    
+    init () {
+        self.incomes = [
+            PersistenceController.shared.createIncome(moc: moc, title: "Sallery", amount: 2000),
+            PersistenceController.shared.createIncome(moc: moc, title: "Passive Income", amount: 1000)
+        ]
+    }
     
     var body: some View {
         ScrollView {
@@ -25,10 +31,30 @@ struct BudgetScreen: View {
                 }
                 .card()
                 
+                HStack (spacing: 20) {
+                    VStack (spacing: 10) {
+                        Text("Remaining")
+                            .font(.caption)
+                        Text("$3000")
+                            .font(.headline)
+                            .foregroundColor(BrandColors.primary)
+                    }
+                    .card()
+                    
+                    VStack (spacing: 10) {
+                        Text("Spent")
+                            .font(.caption)
+                        Text("$2000")
+                            .font(.headline)
+                            .foregroundColor(BrandColors.rose)
+                    }
+                    .card()
+                }
+                
                 VStack (spacing: 0) {
                     ForEach(incomes) { income in
                         HStack {
-                            Text(income.title)
+                            Text(income.title!)
                                 .font(.subheadline)
                             Spacer()
                             Text("$ \(Int(income.amount))")
@@ -38,6 +64,7 @@ struct BudgetScreen: View {
                         .padding(.vertical, 10)
                         
                         Divider()
+                            .background(BrandColors.lightGray)
                     }
                     
                     HStack {

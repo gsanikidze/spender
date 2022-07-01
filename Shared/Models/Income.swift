@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import CoreData
 
-struct Income: Identifiable {
-    var id: UUID
-    var title: String
-    var amount: Double
-    
-    init(title: String, amount: Double) {
-        self.id = UUID()
-        self.title = title
-        self.amount = amount
+extension PersistenceController {
+    func createIncome(moc: NSManagedObjectContext, title: String, amount: Double) -> Income {
+        let income = Income(context: moc)
+        
+        income.id = UUID()
+        income.title = title
+        income.amount = amount
+        
+        return income
     }
 }
