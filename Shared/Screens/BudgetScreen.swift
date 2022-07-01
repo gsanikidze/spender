@@ -11,20 +11,14 @@ struct BudgetScreen: View {
     var body: some View {
         ScrollView {
             VStack (spacing: 20) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color(UIColor.systemBackground))
-                        .multiShadow()
-                    
-                    VStack (spacing: 10) {
-                        Text("Total Budget")
-                            .font(.caption)
-                        Text("$5000")
-                            .font(.headline)
-                            .foregroundColor(BrandColors.primary)
-                    }
-                    .padding()
+                VStack (spacing: 10) {
+                    Text("Total Budget")
+                        .font(.caption)
+                    Text("$5000")
+                        .font(.headline)
+                        .foregroundColor(BrandColors.primary)
                 }
+                .card()
             }
             .padding(.horizontal, 20)
             .padding(.top, 20)
