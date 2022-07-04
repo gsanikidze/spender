@@ -21,6 +21,7 @@ struct MultiShadow: ViewModifier {
 
 struct Card: ViewModifier {
     var title: String = ""
+    var icon: String = ""
     
     func body(content: Content) -> some View {
         ZStack {
@@ -29,11 +30,19 @@ struct Card: ViewModifier {
                 .multiShadow()
             
             VStack (spacing: 10) {
-                if !title.isEmpty {
+                if !title.isEmpty || !icon.isEmpty {
                     HStack {
-                        Text(title)
-                            .font(.headline)
+                        if !title.isEmpty {
+                            Text(title)
+                                .font(.headline)
+                        }
+                        
+                        
                         Spacer()
+                        
+                        if !icon.isEmpty {
+                            Image(systemName: icon)
+                        }
                     }
                 }
                 
@@ -49,7 +58,7 @@ extension View {
         modifier(MultiShadow())
     }
     
-    func card(title: String = "") -> some View {
-        modifier(Card(title: title))
+    func card(title: String = "", icon: String = "") -> some View {
+        modifier(Card(title: title, icon: icon))
     }
 }

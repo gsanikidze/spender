@@ -15,7 +15,7 @@ struct RouterScreen: View {
                     Label("Home", systemImage: "house")
                 }
             
-            Text("Categories")
+            CategoriesScreen()
                 .tabItem {
                     Label("Categories", systemImage: "square.grid.2x2")
                 }
