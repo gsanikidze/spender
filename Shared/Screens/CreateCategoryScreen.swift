@@ -18,7 +18,7 @@ struct CreateCategoryScreen: View {
     private let columns = Array(repeating: GridItem(spacing: 20), count: 3)
     
     private func createCategory() {
-        PersistenceController.shared.createExpenceCategory(moc: moc, title: title, icon: icon)
+        PersistenceController.shared.createExpenseCategory(moc: moc, title: title, icon: icon)
         dismiss()
     }
     

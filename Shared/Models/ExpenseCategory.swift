@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 extension PersistenceController {
-    func createExpenceCategory(moc: NSManagedObjectContext, title: String, icon: String) {
+    func createExpenseCategory(moc: NSManagedObjectContext, title: String, icon: String) {
         let cat = ExpenseCategory(context: moc)
         
         cat.id = UUID()

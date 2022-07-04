@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BudgetScreen: View {
     @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: ExpenseCategory.entity(), sortDescriptors: []) private var categories: FetchedResults<ExpenseCategory>
     
     private var incomes: [Income] = []
     
@@ -74,6 +75,31 @@ struct BudgetScreen: View {
                     .padding(.top)
                 }
                 .card(title: "Income")
+                
+                Section (header: Text("Expenses")) {
+                    VStack (spacing: 20) {
+                        ForEach(categories) { cat in
+                            VStack (spacing: 15) {
+                                Divider()
+                                
+                                if cat.expenses?.count == 0 {
+                                    Text("There is no expense in this categorie")
+                                        .font(.caption)
+                                } else {
+                                    Text("Expenses!!!")
+                                }
+                                
+                                Divider()
+                                
+                                HStack {
+                                    Spacer()
+                                    Button("Add", action: {})
+                                        .primary(size: .sm)
+                                }
+                            }.card(title: cat.title!, icon: cat.icon!)
+                        }
+                    }
+                }
             }
             .padding(.horizontal, 20)
             .padding(.top, 20)
