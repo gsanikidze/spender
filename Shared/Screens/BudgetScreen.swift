@@ -12,6 +12,7 @@ struct BudgetScreen: View {
     @FetchRequest(entity: ExpenseCategory.entity(), sortDescriptors: []) private var categories: FetchedResults<ExpenseCategory>
     
     private var incomes: [Income] = []
+    @State private var isCreateExpenseOpen = false
     
     init () {
         self.incomes = [
@@ -86,23 +87,35 @@ struct BudgetScreen: View {
                                     Text("There is no expense in this categorie")
                                         .font(.caption)
                                 } else {
-                                    Text("Expenses!!!")
+                                    ForEach(Array(cat.expenses as! Set<Expense>)) { expsense in
+                                        HStack {
+                                            Text(expsense.title!)
+                                                .font(.caption)
+                                            Spacer()
+                                            Text("$ \(expsense.amount)")
+                                                .font(.caption)
+                                                .foregroundColor(BrandColors.primary )
+                                        }
+                                    }
                                 }
                                 
                                 Divider()
                                 
                                 HStack {
                                     Spacer()
-                                    Button("Add", action: {})
+                                    Button("Add", action: { self.isCreateExpenseOpen.toggle() })
                                         .primary(size: .sm)
                                 }
-                            }.card(title: cat.title!, icon: cat.icon!)
+                            }
+                            .card(title: cat.title!, icon: cat.icon!)
+                            .sheet(isPresented: $isCreateExpenseOpen) {
+                                CreateExpenseScreen(expenseCategory: cat)
+                            }
                         }
                     }
                 }
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 20)
+            .padding(20)
         }
     }
 }
