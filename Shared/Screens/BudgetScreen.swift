@@ -10,9 +10,16 @@ import SwiftUI
 struct BudgetScreen: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: ExpenseCategory.entity(), sortDescriptors: []) private var categories: FetchedResults<ExpenseCategory>
+    @FetchRequest(entity: Expense.entity(), sortDescriptors: []) private var expenses: FetchedResults<Expense>
     
     private var incomes: [Income] = []
-    @State private var isCreateExpenseOpen = false
+    @State private var createExpenseIn: ExpenseCategory?
+    
+    private var totalSpend: Double {
+        get {
+            return expenses.reduce(0) { $0 + $1.amount }
+        }
+    }
     
     init () {
         self.incomes = [
@@ -46,7 +53,7 @@ struct BudgetScreen: View {
                     VStack (spacing: 10) {
                         Text("Spent")
                             .font(.caption)
-                        Text("$2000")
+                        Text("$ \(String(format: "%.2f", totalSpend))")
                             .font(.headline)
                             .foregroundColor(BrandColors.rose)
                     }
@@ -59,7 +66,7 @@ struct BudgetScreen: View {
                             Text(income.title!)
                                 .font(.subheadline)
                             Spacer()
-                            Text("$ \(Int(income.amount))")
+                            Text("$ \(String(format: "%.2f", income.amount))")
                                 .font(.footnote)
                                 .foregroundColor(BrandColors.primary)
                         }
@@ -92,9 +99,10 @@ struct BudgetScreen: View {
                                             Text(expsense.title!)
                                                 .font(.caption)
                                             Spacer()
-                                            Text("$ \(expsense.amount)")
+                                            Text("$ \(String(format: "%.2f", expsense.amount))")
                                                 .font(.caption)
-                                                .foregroundColor(BrandColors.primary )
+                                                .foregroundColor(BrandColors.primary)
+                                                .bold()
                                         }
                                     }
                                 }
@@ -103,14 +111,15 @@ struct BudgetScreen: View {
                                 
                                 HStack {
                                     Spacer()
-                                    Button("Add", action: { self.isCreateExpenseOpen.toggle() })
+                                    Button("Add", action: { self.createExpenseIn = cat })
                                         .primary(size: .sm)
                                 }
                             }
                             .card(title: cat.title!, icon: cat.icon!)
-                            .sheet(isPresented: $isCreateExpenseOpen) {
-                                CreateExpenseScreen(expenseCategory: cat)
-                            }
+                            
+                        }
+                        .sheet(item: $createExpenseIn) { category in
+                            CreateExpenseScreen(expenseCategory: category)
                         }
                     }
                 }
