@@ -9,13 +9,13 @@ import Foundation
 import CoreData
 
 extension PersistenceController {
-    func createIncome(moc: NSManagedObjectContext, title: String, amount: Double) -> Income {
+    func createIncome(moc: NSManagedObjectContext, title: String, amount: Double) {
         let income = Income(context: moc)
         
         income.id = UUID()
         income.title = title
         income.amount = amount
         
-        return income
+        self.save(moc)
     }
 }

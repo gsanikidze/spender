@@ -15,18 +15,18 @@
 		212ED31028747E1A006100CA /* CreateExpenseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212ED30E28747E1A006100CA /* CreateExpenseScreen.swift */; };
 		212ED312287480B6006100CA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212ED311287480B6006100CA /* Expense.swift */; };
 		212ED313287480B6006100CA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212ED311287480B6006100CA /* Expense.swift */; };
+		212ED31E2876D391006100CA /* CreateIncomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212ED31D2876D391006100CA /* CreateIncomeScreen.swift */; };
+		212ED31F2876D391006100CA /* CreateIncomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212ED31D2876D391006100CA /* CreateIncomeScreen.swift */; };
 		21691C7A286EE3CC00C750DE /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C79286EE3CC00C750DE /* ViewExtension.swift */; };
 		21691C7B286EE3CC00C750DE /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C79286EE3CC00C750DE /* ViewExtension.swift */; };
-		21691C7D286EE55500C750DE /* BudgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C7C286EE55500C750DE /* BudgetScreen.swift */; };
-		21691C7E286EE55500C750DE /* BudgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C7C286EE55500C750DE /* BudgetScreen.swift */; };
+		21691C7D286EE55500C750DE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C7C286EE55500C750DE /* HomeScreen.swift */; };
+		21691C7E286EE55500C750DE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C7C286EE55500C750DE /* HomeScreen.swift */; };
 		21691C86286F137900C750DE /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C85286F137900C750DE /* Income.swift */; };
 		21691C87286F137900C750DE /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C85286F137900C750DE /* Income.swift */; };
 		21691C89286F2ED300C750DE /* CategoriesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C88286F2ED300C750DE /* CategoriesScreen.swift */; };
 		21691C8A286F2ED300C750DE /* CategoriesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21691C88286F2ED300C750DE /* CategoriesScreen.swift */; };
 		21699B54286C3F6D0023C4F7 /* RouterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B53286C3F6D0023C4F7 /* RouterScreen.swift */; };
 		21699B55286C3F6D0023C4F7 /* RouterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B53286C3F6D0023C4F7 /* RouterScreen.swift */; };
-		21699B57286C433B0023C4F7 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B56286C433B0023C4F7 /* HomeScreen.swift */; };
-		21699B58286C433B0023C4F7 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B56286C433B0023C4F7 /* HomeScreen.swift */; };
 		21699B5A286C51D70023C4F7 /* TopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B59286C51D70023C4F7 /* TopTabView.swift */; };
 		21699B5B286C51D70023C4F7 /* TopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21699B59286C51D70023C4F7 /* TopTabView.swift */; };
 		219B4D64286B0BAA0031089B /* spender.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D51286B0BA60031089B /* spender.xcdatamodeld */; };
@@ -60,12 +60,12 @@
 		212ED30B287320B2006100CA /* ExpenseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCategory.swift; sourceTree = "<group>"; };
 		212ED30E28747E1A006100CA /* CreateExpenseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExpenseScreen.swift; sourceTree = "<group>"; };
 		212ED311287480B6006100CA /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		212ED31D2876D391006100CA /* CreateIncomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIncomeScreen.swift; sourceTree = "<group>"; };
 		21691C79286EE3CC00C750DE /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		21691C7C286EE55500C750DE /* BudgetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetScreen.swift; sourceTree = "<group>"; };
+		21691C7C286EE55500C750DE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		21691C85286F137900C750DE /* Income.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
 		21691C88286F2ED300C750DE /* CategoriesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesScreen.swift; sourceTree = "<group>"; };
 		21699B53286C3F6D0023C4F7 /* RouterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterScreen.swift; sourceTree = "<group>"; };
-		21699B56286C433B0023C4F7 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		21699B59286C51D70023C4F7 /* TopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabView.swift; sourceTree = "<group>"; };
 		21699B5C286C55E00023C4F7 /* spender (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "spender (iOS).entitlements"; sourceTree = "<group>"; };
 		219B4D52286B0BA60031089B /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
@@ -173,11 +173,11 @@
 				219B4D79286B0DC80031089B /* WelcomeScreen.swift */,
 				21B69CA1286B47790051D81F /* GuardScreen.swift */,
 				21699B53286C3F6D0023C4F7 /* RouterScreen.swift */,
-				21699B56286C433B0023C4F7 /* HomeScreen.swift */,
-				21691C7C286EE55500C750DE /* BudgetScreen.swift */,
+				21691C7C286EE55500C750DE /* HomeScreen.swift */,
 				21691C88286F2ED300C750DE /* CategoriesScreen.swift */,
 				212ED3082873172E006100CA /* CreateCategoryScreen.swift */,
 				212ED30E28747E1A006100CA /* CreateExpenseScreen.swift */,
+				212ED31D2876D391006100CA /* CreateIncomeScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -292,6 +292,7 @@
 			files = (
 				212ED312287480B6006100CA /* Expense.swift in Sources */,
 				21691C86286F137900C750DE /* Income.swift in Sources */,
+				212ED31E2876D391006100CA /* CreateIncomeScreen.swift in Sources */,
 				21B69C96286B26C90051D81F /* CarouselItem.swift in Sources */,
 				219B4D64286B0BAA0031089B /* spender.xcdatamodeld in Sources */,
 				212ED3092873172E006100CA /* CreateCategoryScreen.swift in Sources */,
@@ -300,8 +301,7 @@
 				219B4D6A286B0BAA0031089B /* Persistence.swift in Sources */,
 				21B69CA2286B47790051D81F /* GuardScreen.swift in Sources */,
 				219B4D7A286B0DC80031089B /* WelcomeScreen.swift in Sources */,
-				21699B57286C433B0023C4F7 /* HomeScreen.swift in Sources */,
-				21691C7D286EE55500C750DE /* BudgetScreen.swift in Sources */,
+				21691C7D286EE55500C750DE /* HomeScreen.swift in Sources */,
 				212ED30C287320B2006100CA /* ExpenseCategory.swift in Sources */,
 				219B4D7E286B17CF0031089B /* BrandColors.swift in Sources */,
 				219B4D66286B0BAA0031089B /* spenderApp.swift in Sources */,
@@ -321,6 +321,7 @@
 			files = (
 				212ED313287480B6006100CA /* Expense.swift in Sources */,
 				21691C87286F137900C750DE /* Income.swift in Sources */,
+				212ED31F2876D391006100CA /* CreateIncomeScreen.swift in Sources */,
 				21B69C97286B26C90051D81F /* CarouselItem.swift in Sources */,
 				219B4D65286B0BAA0031089B /* spender.xcdatamodeld in Sources */,
 				212ED30A2873172E006100CA /* CreateCategoryScreen.swift in Sources */,
@@ -329,8 +330,7 @@
 				219B4D6B286B0BAA0031089B /* Persistence.swift in Sources */,
 				21B69CA3286B47790051D81F /* GuardScreen.swift in Sources */,
 				219B4D7B286B0DC80031089B /* WelcomeScreen.swift in Sources */,
-				21699B58286C433B0023C4F7 /* HomeScreen.swift in Sources */,
-				21691C7E286EE55500C750DE /* BudgetScreen.swift in Sources */,
+				21691C7E286EE55500C750DE /* HomeScreen.swift in Sources */,
 				212ED30D287320B2006100CA /* ExpenseCategory.swift in Sources */,
 				219B4D7F286B17CF0031089B /* BrandColors.swift in Sources */,
 				219B4D67286B0BAA0031089B /* spenderApp.swift in Sources */,
