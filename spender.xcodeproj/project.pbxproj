@@ -33,8 +33,6 @@
 		219B4D65286B0BAA0031089B /* spender.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D51286B0BA60031089B /* spender.xcdatamodeld */; };
 		219B4D66286B0BAA0031089B /* spenderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D53286B0BA60031089B /* spenderApp.swift */; };
 		219B4D67286B0BAA0031089B /* spenderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D53286B0BA60031089B /* spenderApp.swift */; };
-		219B4D68286B0BAA0031089B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D54286B0BA60031089B /* ContentView.swift */; };
-		219B4D69286B0BAA0031089B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D54286B0BA60031089B /* ContentView.swift */; };
 		219B4D6A286B0BAA0031089B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D55286B0BA60031089B /* Persistence.swift */; };
 		219B4D6B286B0BAA0031089B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D55286B0BA60031089B /* Persistence.swift */; };
 		219B4D6C286B0BAA0031089B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 219B4D56286B0BAA0031089B /* Assets.xcassets */; };
@@ -70,7 +68,6 @@
 		21699B5C286C55E00023C4F7 /* spender (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "spender (iOS).entitlements"; sourceTree = "<group>"; };
 		219B4D52286B0BA60031089B /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		219B4D53286B0BA60031089B /* spenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spenderApp.swift; sourceTree = "<group>"; };
-		219B4D54286B0BA60031089B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		219B4D55286B0BA60031089B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		219B4D56286B0BAA0031089B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		219B4D5B286B0BAA0031089B /* Spender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spender.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,7 +166,6 @@
 		219B4D78286B0BE10031089B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				219B4D54286B0BA60031089B /* ContentView.swift */,
 				219B4D79286B0DC80031089B /* WelcomeScreen.swift */,
 				21B69CA1286B47790051D81F /* GuardScreen.swift */,
 				21699B53286C3F6D0023C4F7 /* RouterScreen.swift */,
@@ -309,7 +305,6 @@
 				21B69C99286B30F70051D81F /* ButtonExtension.swift in Sources */,
 				21B69C9F286B38FE0051D81F /* User.swift in Sources */,
 				21691C7A286EE3CC00C750DE /* ViewExtension.swift in Sources */,
-				219B4D68286B0BAA0031089B /* ContentView.swift in Sources */,
 				212ED30F28747E1A006100CA /* CreateExpenseScreen.swift in Sources */,
 				21691C89286F2ED300C750DE /* CategoriesScreen.swift in Sources */,
 			);
@@ -338,7 +333,6 @@
 				21B69C9A286B30F70051D81F /* ButtonExtension.swift in Sources */,
 				21B69CA0286B38FE0051D81F /* User.swift in Sources */,
 				21691C7B286EE3CC00C750DE /* ViewExtension.swift in Sources */,
-				219B4D69286B0BAA0031089B /* ContentView.swift in Sources */,
 				212ED31028747E1A006100CA /* CreateExpenseScreen.swift in Sources */,
 				21691C8A286F2ED300C750DE /* CategoriesScreen.swift in Sources */,
 			);

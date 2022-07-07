@@ -32,6 +32,16 @@ struct HomeScreen: View {
         }
     }
     
+    private func clearBudget() {
+        for cat in categories {
+            PersistenceController.shared.delete(moc, cat)
+        }
+        
+        for inc in incomes {
+            PersistenceController.shared.delete(moc, inc)
+        }
+    }
+    
     var body: some View {
         ScrollView {
             VStack (spacing: 20) {
@@ -95,42 +105,51 @@ struct HomeScreen: View {
                 
                 Section (header: Text("Expenses")) {
                     VStack (spacing: 20) {
-                        ForEach(categories) { cat in
-                            VStack (spacing: 15) {
-                                Divider()
-                                
-                                if cat.expenses?.count == 0 {
-                                    Text("There is no expense in this categorie")
-                                        .font(.caption)
-                                } else {
-                                    ForEach(Array(cat.expenses as! Set<Expense>)) { expsense in
-                                        HStack {
-                                            Text(expsense.title!)
-                                                .font(.caption)
-                                            Spacer()
-                                            Text("$\(String(format: "%.2f", expsense.amount))")
-                                                .font(.caption)
-                                                .foregroundColor(BrandColors.primary)
-                                                .bold()
+                        if categories.count == 0 {
+                            Text("There is no expenses")
+                                .font(.caption)
+                        } else {
+                            ForEach(categories) { cat in
+                                VStack (spacing: 15) {
+                                    Divider()
+                                    
+                                    if cat.expenses?.count == 0 {
+                                        Text("There is no expense in this categorie")
+                                            .font(.caption)
+                                    } else {
+                                        ForEach(Array(cat.expenses as! Set<Expense>)) { expsense in
+                                            HStack {
+                                                Text(expsense.title!)
+                                                    .font(.caption)
+                                                Spacer()
+                                                Text("$\(String(format: "%.2f", expsense.amount))")
+                                                    .font(.caption)
+                                                    .foregroundColor(BrandColors.primary)
+                                                    .bold()
+                                            }
                                         }
                                     }
+                                    
+                                    Divider()
+                                    
+                                    HStack {
+                                        Spacer()
+                                        Button("Add", action: { self.createExpenseIn = cat })
+                                            .primary(size: .sm)
+                                    }
                                 }
-                                
-                                Divider()
-                                
-                                HStack {
-                                    Spacer()
-                                    Button("Add", action: { self.createExpenseIn = cat })
-                                        .primary(size: .sm)
-                                }
+                                .card(title: cat.title!, icon: cat.icon!)
                             }
-                            .card(title: cat.title!, icon: cat.icon!)
-                            
-                        }
-                        .sheet(item: $createExpenseIn) { category in
-                            CreateExpenseScreen(expenseCategory: category)
+                            .sheet(item: $createExpenseIn) { category in
+                                CreateExpenseScreen(expenseCategory: category)
+                            }
                         }
                     }
+                }
+                
+                if !(totalSpend == 0 && totalBudget == 0 && totalRemaining == 0) {
+                    Button("Reset Budget", action: { clearBudget() })
+                        .foregroundColor(BrandColors.rose)
                 }
             }
             .padding(20)
