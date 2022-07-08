@@ -20,7 +20,7 @@ struct RouterScreen: View {
                     Label("Categories", systemImage: "square.grid.2x2")
                 }
             
-            Text("Insights Screen")
+            InsightsScreen()
                 .tabItem {
                     Label("Insights", systemImage: "chart.bar")
                 }

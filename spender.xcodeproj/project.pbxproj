@@ -43,6 +43,11 @@
 		219B4D7F286B17CF0031089B /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D7D286B17CF0031089B /* BrandColors.swift */; };
 		219B4D84286B1D210031089B /* CarouselItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D83286B1D210031089B /* CarouselItemView.swift */; };
 		219B4D85286B1D210031089B /* CarouselItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B4D83286B1D210031089B /* CarouselItemView.swift */; };
+		21A21FFF287822D600FA6ABB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 21A21FFE287822D600FA6ABB /* Charts */; };
+		21A220012878231900FA6ABB /* InsightsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A220002878231900FA6ABB /* InsightsScreen.swift */; };
+		21A220022878231900FA6ABB /* InsightsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A220002878231900FA6ABB /* InsightsScreen.swift */; };
+		21A2200428782F2100FA6ABB /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A2200328782F2100FA6ABB /* PieChart.swift */; };
+		21A2200528782F2100FA6ABB /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A2200328782F2100FA6ABB /* PieChart.swift */; };
 		21B69C96286B26C90051D81F /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69C95286B26C90051D81F /* CarouselItem.swift */; };
 		21B69C97286B26C90051D81F /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69C95286B26C90051D81F /* CarouselItem.swift */; };
 		21B69C99286B30F70051D81F /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B69C98286B30F70051D81F /* ButtonExtension.swift */; };
@@ -76,6 +81,8 @@
 		219B4D79286B0DC80031089B /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		219B4D7D286B17CF0031089B /* BrandColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandColors.swift; sourceTree = "<group>"; };
 		219B4D83286B1D210031089B /* CarouselItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemView.swift; sourceTree = "<group>"; };
+		21A220002878231900FA6ABB /* InsightsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsScreen.swift; sourceTree = "<group>"; };
+		21A2200328782F2100FA6ABB /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 		21B69C95286B26C90051D81F /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
 		21B69C98286B30F70051D81F /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		21B69C9E286B38FE0051D81F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -87,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A21FFF287822D600FA6ABB /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +153,7 @@
 			children = (
 				219B4D83286B1D210031089B /* CarouselItemView.swift */,
 				21699B59286C51D70023C4F7 /* TopTabView.swift */,
+				21A2200328782F2100FA6ABB /* PieChart.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +183,7 @@
 				212ED3082873172E006100CA /* CreateCategoryScreen.swift */,
 				212ED30E28747E1A006100CA /* CreateExpenseScreen.swift */,
 				212ED31D2876D391006100CA /* CreateIncomeScreen.swift */,
+				21A220002878231900FA6ABB /* InsightsScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -204,6 +214,9 @@
 			dependencies = (
 			);
 			name = "spender (iOS)";
+			packageProductDependencies = (
+				21A21FFE287822D600FA6ABB /* Charts */,
+			);
 			productName = "spender (iOS)";
 			productReference = 219B4D5B286B0BAA0031089B /* Spender.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +265,9 @@
 				Base,
 			);
 			mainGroup = 219B4D4B286B0BA60031089B;
+			packageReferences = (
+				21A21FFD287822D600FA6ABB /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 219B4D5C286B0BAA0031089B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A220012878231900FA6ABB /* InsightsScreen.swift in Sources */,
 				212ED312287480B6006100CA /* Expense.swift in Sources */,
 				21691C86286F137900C750DE /* Income.swift in Sources */,
 				212ED31E2876D391006100CA /* CreateIncomeScreen.swift in Sources */,
@@ -293,6 +310,7 @@
 				219B4D64286B0BAA0031089B /* spender.xcdatamodeld in Sources */,
 				212ED3092873172E006100CA /* CreateCategoryScreen.swift in Sources */,
 				21699B5A286C51D70023C4F7 /* TopTabView.swift in Sources */,
+				21A2200428782F2100FA6ABB /* PieChart.swift in Sources */,
 				21699B54286C3F6D0023C4F7 /* RouterScreen.swift in Sources */,
 				219B4D6A286B0BAA0031089B /* Persistence.swift in Sources */,
 				21B69CA2286B47790051D81F /* GuardScreen.swift in Sources */,
@@ -314,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A220022878231900FA6ABB /* InsightsScreen.swift in Sources */,
 				212ED313287480B6006100CA /* Expense.swift in Sources */,
 				21691C87286F137900C750DE /* Income.swift in Sources */,
 				212ED31F2876D391006100CA /* CreateIncomeScreen.swift in Sources */,
@@ -321,6 +340,7 @@
 				219B4D65286B0BAA0031089B /* spender.xcdatamodeld in Sources */,
 				212ED30A2873172E006100CA /* CreateCategoryScreen.swift in Sources */,
 				21699B5B286C51D70023C4F7 /* TopTabView.swift in Sources */,
+				21A2200528782F2100FA6ABB /* PieChart.swift in Sources */,
 				21699B55286C3F6D0023C4F7 /* RouterScreen.swift in Sources */,
 				219B4D6B286B0BAA0031089B /* Persistence.swift in Sources */,
 				21B69CA3286B47790051D81F /* GuardScreen.swift in Sources */,
@@ -602,6 +622,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		21A21FFD287822D600FA6ABB /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		21A21FFE287822D600FA6ABB /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21A21FFD287822D600FA6ABB /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		219B4D51286B0BA60031089B /* spender.xcdatamodeld */ = {
