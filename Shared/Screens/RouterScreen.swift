@@ -24,12 +24,6 @@ struct RouterScreen: View {
                 .tabItem {
                     Label("Insights", systemImage: "chart.bar")
                 }
-            
-            Text("Scanned Docs Screen")
-                .badge("!")
-                .tabItem {
-                    Label("Checkes", systemImage: "doc.viewfinder")
-                }
         }
     }
 }
